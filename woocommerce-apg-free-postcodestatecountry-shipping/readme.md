@@ -9,11 +9,11 @@ Requires at least: 5.0
 
 Tested up to: 6.9
 
-Stable tag: 3.3.0.1
+Stable tag: 3.5.2
 
 WC requires at least: 5.6
 
-WC tested up to: 10.2.1
+WC tested up to: 10.5.0
 
 License: GPLv2 or later
 
@@ -39,6 +39,7 @@ Añade a WooCommerce un envío gratuito basado en el código postal, provincia (
 * Puedes excluir roles de usuario.
 * Puedes ocultar medios de pago.
 * Puedes ocultar métodos de envío de la misma zona de envío.
+* Búsqueda AJAX con SelectWoo para listas largas en el admin.
 * Puedes mostrar una imagen personalizada.
 * Puedes mostrar el precio 0.
 * Puedes mostrar el tiempo estimado de entrega.
@@ -94,6 +95,21 @@ Si necesitas ayuda para configurar o instalar **WC - APG Free Shipping**, **Art 
 *En ningún caso **Art Project Group** proporciona ningún tipo de soporte técnico gratuito.*
 
 ## Changelog
+### 3.5.2
+* Pequeños arreglos.
+
+### 3.5.1
+* Pequeños arreglos.
+
+### 3.5.0
+* Arreglo de desbordamiento de memoria.
+* Mejora de rendimiento general.
+* Pequeños arreglos.
+
+### 3.4.0
+* Nuevo sistema de búsqueda AJAX con SelectWoo para listas largas de términos en el admin, evitando renderizar miles de opciones a la vez.
+* Pequeños arreglos.
+
 ### 3.3.0.1
 * Pequeños arreglos.
 

@@ -4,9 +4,9 @@ Donate link: https://artprojectgroup.es/tienda/donacion
 Tags: WooCommerce, Shipping, Free Shipping
 Requires at least: 5.0
 Tested up to: 6.9
-Stable tag: 3.3.0.1
+Stable tag: 3.5.2
 WC requires at least: 5.6
-WC tested up to: 10.2.1
+WC tested up to: 10.5.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,7 @@ Add to WooCommerce a free shipping based on postcode, state (province), country 
 * You can exclude user roles.
 * You can hide payment gateways.
 * You can hide shipping methods from the same shipping zone.
+* AJAX search with SelectWoo for large admin lists.
 * You can show a custom icon image.
 * You can show price 0.
 * You can show the estimated delivery time.
@@ -89,6 +90,17 @@ If you need help to configuring or installing **WC - APG Free Shipping**, **Art 
 2. Screenshot of WC - APG Free Shipping. APG Free Shipping Tab.
 
 == Changelog ==
+= 3.5.2 =
+* Small fixes.
+= 3.5.1 =
+* Small fixes.
+= 3.5.0 =
+* Fixed memory overflow.
+* General performance enhancement.
+* Small fixes.
+= 3.4.0 =
+* New AJAX search system with SelectWoo for long admin term lists, preventing thousands of options from being rendered at once.
+* Small fixes.
 = 3.3.0.1 =
 * Small fixes.
 = 3.3 =
@@ -333,7 +345,7 @@ If you need help to configuring or installing **WC - APG Free Shipping**, **Art 
 * Initial version.
 
 == Upgrade Notice ==
-= 3.3.0.1 =
+= 3.5.1 =
 * Small fixes.
 
 == Translations ==
