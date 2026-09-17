@@ -43,7 +43,7 @@ function apg_free_shipping_enlaces( $enlaces, $archivo ) {
 		$enlaces[] = '<a href="'. $apg_free_shipping[ 'plugin_url' ] . '" target="_blank" title="' . $apg_free_shipping[ 'plugin' ] . '"><strong class="artprojectgroup">APG</strong></a>';
 		$enlaces[] = '<a href="https://www.facebook.com/artprojectgroup" title="' . __( 'Follow us on ', 'woocommerce-apg-free-postcodestatecountry-shipping' ) . 'Facebook" target="_blank"><span class="genericon genericon-facebook-alt"></span></a> <a href="https://x.com/artprojectgroup" title="' . __( 'Follow us on ', 'woocommerce-apg-free-postcodestatecountry-shipping' ) . 'X" target="_blank"><span class="genericon genericon-x-alt"></span></a> <a href="https://es.linkedin.com/in/artprojectgroup" title="' . __( 'Follow us on ', 'woocommerce-apg-free-postcodestatecountry-shipping' ) . 'LinkedIn" target="_blank"><span class="genericon genericon-linkedin"></span></a>';
 		$enlaces[] = '<a href="https://profiles.wordpress.org/artprojectgroup/" title="' . __( 'More plugins on ', 'woocommerce-apg-free-postcodestatecountry-shipping' ) . 'WordPress" target="_blank"><span class="genericon genericon-wordpress"></span></a>';
-		$enlaces[] = '<a href="mailto:info@artprojectgroup.es" title="' . __( 'Contact us by ', 'woocommerce-apg-free-postcodestatecountry-shipping' ) . 'e-mail"><span class="genericon genericon-mail"></span></a> <a href="skype:artprojectgroup" title="' . __( 'Contact us by ', 'woocommerce-apg-free-postcodestatecountry-shipping' ) . 'Skype"><span class="genericon genericon-skype"></span></a>';
+		$enlaces[] = '<a href="mailto:info@artprojectgroup.es" title="' . __( 'Contact us by ', 'woocommerce-apg-free-postcodestatecountry-shipping' ) . 'e-mail"><span class="genericon genericon-mail"></span></a>';
 		$enlaces[] = apg_free_shipping_plugin( $apg_free_shipping[ 'plugin_uri' ] );
 	}
 	
@@ -120,6 +120,12 @@ function apg_free_shipping_plugin( $nombre ) {
 	}
 
 	$plugin = json_decode( wp_remote_retrieve_body( $respuesta ) );
+
+	// Una respuesta con un cuerpo inesperado deja $plugin en null: leer ->rating avisa y pinta una valoración vacía.
+	if ( ! is_object( $plugin ) || ! isset( $plugin->rating, $plugin->num_ratings ) ) {
+		// translators: %s is the plugin name.
+		return '<a title="' . sprintf( __( 'Please, rate %s:', 'woocommerce-apg-free-postcodestatecountry-shipping' ), $apg_free_shipping[ 'plugin' ] ) . '" href="' . $apg_free_shipping[ 'puntuacion' ] . '?rate=5#postform" class="estrellas">' . __( 'Unknown rating', 'woocommerce-apg-free-postcodestatecountry-shipping' ) . '</a>';
+	}
 
     $rating = [
 	   'rating'		=> $plugin->rating,
