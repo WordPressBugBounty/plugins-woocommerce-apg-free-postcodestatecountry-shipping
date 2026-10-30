@@ -9,15 +9,12 @@ Tags: WooCommerce, Shipping, Free Shipping
 Requires at least: 5.7
 
 Tested up to: 7.2
-
 Requires PHP: 7.4
 
-Stable tag: 3.11.0
-
+Stable tag: 3.12.0
 WC requires at least: 5.6
 
-WC tested up to: 11.1.0
-
+WC tested up to: 11.2.1
 License: GPLv3 or later
 
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -116,6 +113,12 @@ Si necesitas ayuda para configurar o instalar **WC - APG Free Shipping**, **Art 
 _En ningún caso **Art Project Group** proporciona ningún tipo de soporte técnico gratuito._
 
 ## Changelog
+
+### 3.12.0
+
+- Corregida la comprobación del cupón de envío gratuito, que dejaba un aviso en el registro en cada cálculo de envío.
+- Quitado el código de compatibilidad con WooCommerce anterior a 4.4, que ya no se ejecutaba.
+- Compatible con WordPress 7.2 y WooCommerce 11.2.1.
 
 ### 3.11.0
 
